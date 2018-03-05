@@ -1,0 +1,31 @@
+$default-color: #333;
+$default-color--darken: darken($default-color, 70%); // Variables
+
+// Functions and mixins
+@mixin square ($size) {
+  width: $size;
+  height: $size;
+}
+
+.button {
+  background-color: $default-color;
+  border: 1px solid $default-color--darken;
+
+  // Nesting
+  &__icon {
+    @include square(18px);
+
+    // Mapping
+    $icons: (
+      eye: 'eyes.svg',
+      drupal: 'drupal.svg'
+    );
+
+    // Loops
+    @each $icon, $url in $icons {
+      &--#{$icon} {
+        background-image: url('../assets/icons/#{$url}');
+      }
+    }
+  }
+}

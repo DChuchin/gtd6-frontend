@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
   <style>
     .no-count::after {
       visibility: hidden;
@@ -431,6 +431,7 @@
     <h2>
       Что-то про HTML5 API
     </h2>
+    <img width="880" src="./pictures/html5.png" />
   </section>
 
   <section class="slide">
@@ -467,9 +468,37 @@
       Версии ECMAScript
     </h2>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>ES5
+        <ul>
+          <li>аксессоры getters и setters</li>
+          <li>поддержку JSON</li>
+          <li>множество новых функций</li>
+        </ul>
+      </li>
+      <li class="next">ES6/ES2015
+        <ul>
+          <li>стрелочные функции</li>
+          <li>создание шаблонных строк с помощью ``(обратных кавычек)</li>
+          <li>let и const</li>
+          <li>Итератор / Symbol</li>
+          <li>Функции-генераторы</li>
+          <li>добавлены Promise</li>
+        </ul></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>
+      Версии ECMAScript
+    </h2>
+    <ul>
+      <li>ES7/ES2016</li>
+      <li class="next">ES8/ES2017<ul>
+        <li>Асинхронность: async/await</li>
+        <li>Новые функции для работы со строками</li>
+        <li>Асинхронность: async/await</li>
+      </ul></li>
+      <li class="next">ECMAscript выходит ежегодно</li>
     </ul>
   </section>
 
@@ -609,6 +638,7 @@
 
   <section class="slide">
     какой-нибудь пример с преимуществом препроцессоров
+    <img src="./pictures/scss-features.png" width="auto" height="350" alt="" class="center">
   </section>
 
   <section class="slide">
@@ -619,7 +649,7 @@
 
   <section class="slide">
     <h2>Как работает postCSS</h2>
-    <img class="gamburger" src="./pictures/gamburger.png" widht="auto" height="350" alt="" class="left bottom">
+    <img class="gamburger" src="./pictures/gamburger.png" width="auto" height="350" alt="" class="left bottom">
     <ul id="postcss-list">
       <li>Парсер</li>
       <li id="middle" class="next">Плагины</li>
@@ -677,7 +707,10 @@
     <h2>
        BEM
     </h2>
-    че-нибудь про БЭМ
+    <p>
+      Методология БЭМ создана в Яндексе для разработки сайтов, которые надо делать быстро,а поддерживать долгие годы. <br>
+      Она позволяет создавать расширяемые и повторно используемые компоненты интерфейса.
+    </p>
   </section>
 
   <section class="slide">
@@ -761,7 +794,19 @@
     <h2>
       Тестирование
     </h2>
-    виды тестирования, инструменты. Зачем вообще это?
+  </section>
+
+  
+  <section class="slide">
+    <h2>
+      Виды тестирование
+    </h2>
+    <ul>
+      <li>Unit-тестирование</li>
+      <li>Integration-тестирование</li>
+      <li>E2E-тестирование</li>
+      <li>Regression-тестирование</li>
+    </ul>
   </section>
 
   <section class="slide">
@@ -853,7 +898,7 @@
     </style>
   </div>
 
-  <script src="node_modules/shower-core/shower.min.js"></script>
+  <script src="shower/shower.min.js"></script>
   <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
 
 </body>
