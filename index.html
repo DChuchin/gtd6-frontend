@@ -34,6 +34,11 @@
     .slide.undercover img {
       z-index: -2;
     }
+
+    .slide pre {
+      font-size: 22px;
+    }
+
   </style>
 </head>
 <body class="shower list">
@@ -444,7 +449,7 @@
   </section>
 
   <section class="slide" style="background: #1E1E1E;">
-    <img src="./pictures/scss-features.png" width="auto" height="90%" alt="" class="cover">
+    <img src="./pictures/scss-features.png" width="auto" height="90%" alt="" class="place left">
   </section>
 
   <section class="slide">
@@ -531,7 +536,7 @@
       BEM
     </h2>
     <p style="width: 500px;">
-      Методология БЭМ создана в Яндексе для разработки сайтов, которые надо делать быстро,а поддерживать долгие годы. <br>
+      Методология БЭМ создана в Яндексе для разработки сайтов, которые надо делать быстро, а поддерживать долгие годы. <br>
       Она позволяет создавать расширяемые и повторно используемые компоненты интерфейса.
     </p>
     <img src="./pictures/death-star-lego.png" alt="" width="600" class="place bottom right" style="z-index: -1;">
@@ -539,26 +544,41 @@
 
   <section class="slide">
     <h2>
-      BEM
+      BEM - Блок
     </h2>
     <img src="./pictures/lightsaber-block.png" alt="" width="100%">
     <pre>
-      <code><div class="lightsaber"></div></code>
+      <code>&lt;div class="<mark>light-saber</mark>"&gt;</code>
+      <code>  &lt;div class="light-saber__blade"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="light-saber__hilt"&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
     </pre>
   </section>
 
   <section class="slide">
     <h2>
-      BEM
+      BEM - Эелемент
     </h2>
     <img src="./pictures/lightsaber-element.png" alt="" width="100%">
+    <pre>
+      <code>&lt;div class="light-saber"&gt;</code>
+      <code>  &lt;div class="light-saber<mark>__blade</mark>"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="light-saber<mark>__hilt</mark>"&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>
-      BEM
+      BEM - Модификатор
     </h2>
     <img src="./pictures/lightsaber-mod.png" alt="" width="100%">
+    <pre>
+      <code>&lt;div class="light-saber light-saber<mark>_kylo-ren</mark>"&gt;</code>
+      <code>  &lt;div class="light-saber__blade light-saber__blade<mark>_sith</mark>"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="light-saber__hilt light-saber__hilt<mark>_crossguard</mark>"&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+    </pre>
   </section>
 
   <section class="slide">
@@ -717,7 +737,7 @@
       <li>Будущее фронтенда</li>
       <li>Дальнейшие пути развития</li>
     </ul>
-    <img src="./pictures/deadtrooper.jpg" alt="" class="cover h" style="transform: translate(-50%, -50%) scale(-1, 1);">
+    <img src="./pictures/snow.jpg" alt="" class="cover h" style="transform: translate(-50%, -50%) scale(-1, 1);">
   </section>
 
   <section class="slide">
@@ -727,10 +747,6 @@
     отказ от десктопа в пользу веба, 
     мобильный интернет, 
     JavaScript повсюду
-  </section>
-
-  <section class="slide">
-    <h2 class="shout">Будущее</h2>
   </section>
 
   <section class="slide">
@@ -747,27 +763,27 @@
   <section class="slide">
     <h2>Serverless</h2>
     <ul>
-      <li class="next"> Microsoft Azure </li>
-      <li class="next"> Amazon Web Servises </li>
-      <li class="next"> Google Cloud Platform </li>
+      <li> Microsoft Azure </li>
+      <li> Amazon Web Servises </li>
+      <li> Google Cloud Platform </li>
     </ul>
   </section>
 
   <section class="slide">
     <h2>Мобильный Веб</h2>
     <ul>
-      <li class="next">PWA</li>
-      <li class="next">PhoneGAP, Cordova, Quasar, etc.</li>
-      <li class="next">ReactNative, NativeScript, Weex, etc.</li>
+      <li>PWA</li>
+      <li>PhoneGAP, Cordova, Quasar, etc.</li>
+      <li>ReactNative, NativeScript, Weex, etc.</li>
     </ul>
   </section>
 
   <section class="slide">
     <h2>Десктоп</h2>
     <ul>
-      <li class="next">Electron</li>
-      <li class="next">Meteor</li>
-      <li class="next">Есть еще что-то?</li>
+      <li>Electron</li>
+      <li>Meteor</li>
+      <li>Есть еще что-то?</li>
     </ul>
 
     примеры( Slack, Atom, VSCode)
@@ -779,8 +795,8 @@
     </h2>
      <ul>
       <li> IoT </li>
-      <li> AR / VR</li>
-      <li>Умные Телевизоры</li>
+      <li> AR / VR </li>
+      <li> Умные Телевизоры </li>
       <li> Микроконтроллеры </li>
      </ul>
   </section>
