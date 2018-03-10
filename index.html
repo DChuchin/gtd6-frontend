@@ -10,335 +10,102 @@
     .no-count::after {
       visibility: hidden;
     }
+
+    .slide .section-title {
+      color: yellow;
+      font-size: 130px;
+    }
+
+    .slide .section-title--black {
+      color: black;
+    }
+
+   .slide.undercover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .slide.undercover img {
+      z-index: -2;
+    }
   </style>
 </head>
 <body class="shower list">
 
   <header class="caption">
-    <h1>Shower Presentation Engine</h1>
-    <p>Yours Truly, Famous Inc.</p>
+    <h1>May the force be with you</h1>
+    <p>.. или как стать фронтенд джедаем</p>
   </header>
 
-  <section class="slide" id="intro">
+  <section class="slide no-count undercover" id="intro">
 
-    <h2>
-      Тема: Что-то про фронтенд
+    <img src="./pictures/luke.jpg" alt="" class="cover width" style="z-index: -2;">
+
+    <h2 style="
+      left: 30px;
+      position:  absolute;
+      width: 260px;
+      color:  yellow;
+      font-size: 87px;
+      text-align: left;
+      top: 30px;
+    ">
+      May the force be with you
     </h2>
 
-    <div>
-      <p>
-        Дима Чучин
-      </p>
+    <h2 style="
+      position:  absolute;
+      right:  30px;
+      width: 322px;
+      color:  yellow;
+      font-size: 87px;
+      text-align: right;
+      bottom: 20px;
+    ">
+      .. или как стать фронтенд джедаем
+    </h2>
 
+    <div style="color: white; position: absolute; top: 20px; width: 100%; right: 30px; text-align: right;">
       <p>
         Максим Лукьянчиков
       </p>
 
+      <p>
+        Дима Чучин
+      </p>
+
     </div>
 
     <style>
-      #intro::after {
-        visibility: hidden;
+      #intro p {
+        margin: 0;
+        line-height: 1.75;
       }
     </style>
   </section>
 
-  <section class="slide black" id="titles-intro">
-    <div style="overflow:hidden; position:absolute; left:0; top:0; width:50px; height:25px;">
-      <div style="margin-top:-290px;">
-      </div>
-    </div>
-    
-    <p id="start">A short time ago in a browser very, very close&hellip;</p>
-    
-    <h1>STAR WARS<sub>titles in CSS3</sub></h1>
-    
-    <div id="titles">
-      <div id="titlecontent">
-    
-        <p class="center">EPISODE IV<br />
-          A NEW HOPE FOR CSS3</p>
-    
-        <p>It is a period of vendor war.</p>
-    
-        <p>This is a demonstration of Star Wars-style scrolling 3D titles in CSS3. It possibly has no practical purpose whatsoever but it looks great and you can impress your friends.</p>
-    
-        <p>Before movie-buffs start ranting, I realize Star Wars wasn't the first to use crawling 3D titles, but few of you will remember the Flash Gordon series or the 1936 adaption of HG Wells' "Things to Come".</p>
-    
-        <p>Also, by mentioning "Star Wars", everyone will understand what I mean. And I'll receive several thousand more visits.</p>
-    
-        <p>The scrolling titles work well in Chrome, Safari and Firefox. Opera doesn't implement 3D transforms yet, but the text will scroll. IE users receive a blank page. A shame, but IE10 should support it.</p>
-    
-        <p>So how does it work? Well, it's fairly simple. We have an outer absolute DIV (#titles) which is rotated along the X-axis using perspective to give the impression of depth. The same DIV also has an :after psuedo-element which applies a linear gradient so the text appears to fade out.</p>
-    
-        <p>Inside, we have another absolutely-positioned DIV which contains the text (#titlecontent). The top is set to 100% to ensure it starts off-screen then uses CSS3 animation to move it upward over time. No JavaScript is required.</p>
-    
-        <p>You will probably need to adjust the movement amount and timing depending on the quantity of text you want to show. The 3D depth can also be tweaked in the #titles declaration.</p>
-    
-        <p>All the code is contained in this single HTML file&hellip;</p>
-    
-        <p class="center">View the source, Luke!</p>
-      
-        <p>Sorry. Couldn't resist it.</p>
-      
-        <p>You're welcome to use this demonstration code in your own sites. Please link back to the original article at:</p>
-    
-        <p class="center"><a href="http://www.sitepoint.com/css3-starwars-scrolling-text/">sitepoint.com/<br />css3-starwars-scrolling-text/</a></p>
-    
-        <p>and give me a shout on Twitter <a href="https://twitter.com/craigbuckler">@craigbuckler</a> &ndash; I'd love to see how you use and abuse it!</p>
-    
-        <p>Finally, Han shot first and the original, unadulterated movies remain the best. Stop fiddling with them, George!</p>
-        </div>
-    </div>
-
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-      #titles-intro
-      {
-        max-width: 100%;
-        font-family: "Droid Sans", arial, verdana, sans-serif;
-        font-weight: 700;
-        color: #ff6;
-        background-color: #000;
-        overflow: hidden;
-        z-index: 99999;
-      }
-
-      #titles-intro::after {
-        visibility: hidden;
-      }
-
-      p#start
-      {
-        position: relative;
-        width: 16em;
-        font-size: 200%;
-        font-weight: 400;
-        margin: 20% auto;
-        color: #4ee;
-        opacity: 0;
-        z-index: 1;
-        -webkit-animation: intro 2s ease-out;
-        -moz-animation: intro 2s ease-out;
-        -ms-animation: intro 2s ease-out;
-        -o-animation: intro 2s ease-out;
-        animation: intro 2s ease-out;
-      }
-
-      @-webkit-keyframes intro {
-        0% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      @-moz-keyframes intro {
-        0% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      @-ms-keyframes intro {
-        0% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      @-o-keyframes intro {
-        0% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      @keyframes intro {
-        0% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-
-      #titles-intro h1
-      {
-        position: absolute;
-        width: 2.6em;
-        left: 50%;
-        top: 25%;
-        font-size: 10em;
-        text-align: center;
-        margin-left: -1.3em;
-        line-height: 0.8em;
-        letter-spacing: -0.05em;
-        color: #000;
-        text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
-        opacity: 0;
-        z-index: 1;
-        -webkit-animation: logo 5s ease-out 2.5s;
-        -moz-animation: logo 5s ease-out 2.5s;
-        -ms-animation: logo 5s ease-out 2.5s;
-        -o-animation: logo 5s ease-out 2.5s;
-        animation: logo 5s ease-out 2.5s;
-      }
-
-      #titles-intro h1 sub
-      {
-        display: block;
-        font-size: 0.3em;
-        letter-spacing: 0;
-        line-height: 0.8em;
-      }
-
-      @-webkit-keyframes logo {
-        0% { -webkit-transform: scale(1); opacity: 1; }
-        50% { opacity: 1; }
-        100% { -webkit-transform: scale(0.1); opacity: 0; }
-      }
-
-      @-moz-keyframes logo {
-        0% { -moz-transform: scale(1); opacity: 1; }
-        50% { opacity: 1; }
-        100% { -moz-transform: scale(0.1); opacity: 0; }
-      }
-
-      @-ms-keyframes logo {
-        0% { -ms-transform: scale(1); opacity: 1; }
-        50% { opacity: 1; }
-        100% { -ms-transform: scale(0.1); opacity: 0; }
-      }
-
-      @-o-keyframes logo {
-        0% { -o-transform: scale(1); opacity: 1; }
-        50% { opacity: 1; }
-        100% { -o-transform: scale(0.1); opacity: 0; }
-      }
-
-      @keyframes logo {
-        0% { transform: scale(1); opacity: 1; }
-        50% { opacity: 1; }
-        100% { transform: scale(0.1); opacity: 0; }
-      }
-
-      /* the interesting 3D scrolling stuff */
-      #titles
-      {
-        position: absolute;
-        width: 18em;
-        height: 50em;
-        bottom: 0;
-        left: 50%;
-        margin-left: -9em;
-        font-size: 350%;
-        text-align: justify;
-        overflow: hidden;
-        -webkit-transform-origin: 50% 100%;
-        -moz-transform-origin: 50% 100%;
-        -ms-transform-origin: 50% 100%;
-        -o-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        -webkit-transform: perspective(300px) rotateX(25deg);
-        -moz-transform: perspective(300px) rotateX(25deg);
-        -ms-transform: perspective(300px) rotateX(25deg);
-        -o-transform: perspective(300px) rotateX(25deg);
-        transform: perspective(300px) rotateX(25deg);
-      }
-
-      #titles:after
-      {
-        position: absolute;
-        content: ' ';
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 60%;
-        background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-        background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-        background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-        background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-        background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-        pointer-events: none;
-      }
-
-      #titles p
-      {
-        text-align: justify;
-        margin: 0.8em 0;
-      }
-
-      #titles p.center
-      {
-        text-align: center;
-      }
-
-      #titles a
-      {
-        color: #ff6;
-        text-decoration: underline;
-      }
-
-      #titlecontent
-      {
-        position: absolute;
-        top: 100%;
-        -webkit-animation: scroll 100s linear 4s infinite;
-        -moz-animation: scroll 100s linear 4s infinite;
-        -ms-animation: scroll 100s linear 4s infinite;
-        -o-animation: scroll 100s linear 4s infinite;
-        animation: scroll 100s linear 4s infinite;
-      }
-
-      /* animation */
-      @-webkit-keyframes scroll {
-        0% { top: 100%; }
-        100% { top: -170%; }
-      }
-
-      @-moz-keyframes scroll {
-        0% { top: 100%; }
-        100% { top: -170%; }
-      }
-
-      @-ms-keyframes scroll {
-        0% { top: 100%; }
-        100% { top: -170%; }
-      }
-
-      @-o-keyframes scroll {
-        0% { top: 100%; }
-        100% { top: -170%; }
-      }
-
-      @keyframes scroll {
-        0% { top: 100%; }
-        100% { top: -170%; }
-      }
-    </style>
-  </section>
-
-  <section class="slide">
-    <h2>
-      План
+  <section class="slide no-count undercover">
+    <h2 class="section-title">
+      Эпизод <span style="font-family: serif">I</span> 
     </h2>
-    <ol>
+    <img src="./pictures/ishhu-rabotu.jpg" alt="" class="cover h">
+    <ul style="color: white;" class="next">
       <li>
-        Что такое Фронтенд
+        Что такое фронтенд
       </li>
       <li>
-        История Фронтенда
+        HTML, CSS, JavaScript
       </li>
       <li>
-        Что должен знать Фронтенд разработчик
+        С чего начать
       </li>
-      <li>
-        Возможности Фронтенда
-      </li>
-      <li>
-        Полезные ресурсы
-      </li>
-    </ol>
-  </section>
-
-  <section class="slide">
-    <h2 class="shout">
-      Фронтенд
-    </h2>
-    Крутая картинка
+    </ul>
   </section>
 
   <section class="slide">
@@ -349,7 +116,6 @@
       <blockquote>
         <p>Front-end - интерфейс взаимодействия между пользователем и основной программно-аппаратной частью (back-end).</p>
       </blockquote>
-      <figcaption>Какой-то умный человек</figcaption>
     </figure>
   </section>
 
@@ -359,34 +125,35 @@
     </h2>
 
     <ul>
-      <li class="next">
+      <li>
         Послушать наш доклад
       </li>
-      <li class="next">
+      <li>
         Завести твиттер
       </li>
-      <li class="next">
+      <li>
         Купить macbook
       </li>
     </ul>
   </section>
-
+<!-- 
   <section class="slide" style="background-color: #DEDEDE;">
     <h2 style="color:#000">
       Эволюция Фронтенда
     </h2>
     <img class="cover" src="./pictures/evolution.jpg" alt="">
-  </section>
+  </section> -->
 
   <section class="slide">
-    <h2>
+    <!-- <h2>
       Основные составляющие Фронтенда
-    </h2>
-    <ul>
+    </h2> -->
+    <!-- <ul>
       <li>HTML</li>
       <li>CSS</li>
       <li>JavaScript</li>
-    </ul>
+    </ul> -->
+    <img src="./pictures/maxresdefault.jpg" alt="" class="cover h">
   </section>
 
   <section class="slide">
@@ -399,39 +166,33 @@
   </section>
 
   <section class="slide">
+    <h2>
+      История
+    </h2>
     <ul>
       <li>
-        HTML 2.0 — 24 ноября 1995 года;
+        HTML - приблизительно в 1986—1991 годах
       </li>
-      <li class="next">
-        HTML 3.0 — 28 марта 1995 года — до 28 сентября 1995 года;
+      <li>
+        HTML 2,3 — 1995 год
       </li>
-      <li class="next">
-        HTML 3.2 — 14 января 1997 года;
+      <li>
+        HTML 4 — 1997 год
       </li>
-      <li class="next">
-        HTML 4.0 — 18 декабря 1997 года;
+      <li>
+        HTML 5 — 28 октября 2014 года
       </li>
-      <li class="next">
-        HTML 4.01 — 24 декабря 1999 года;
-      </li>
-      <li class="next">
-        HTML5 — 28 октября 2014 года;
-      </li>
-      <li class="next">
-        HTML 5.1 начал разрабатываться 17 декабря 2012 года. Рекомендован к применению с 1 ноября 2016 года.
-      </li>
-      <li class="next">
-        HTML 5.2 был представлен 14 декабря 2017 года.
+      <li>
+        HTML 5.2 был представлен 14 декабря 2017 года
       </li>
     </ul>
   </section>
 
-  <section class="slide">
-    <h2>
-      Что-то про HTML5 API
-    </h2>
-    <img width="880" src="./pictures/html5.png" />
+  <section class="slide" style="background: #FBFBF9;">
+    <!-- <h2>
+      HTML5 API
+    </h2> -->
+    <img class="cover h" src="./pictures/html5api.png" />
   </section>
 
   <section class="slide">
@@ -444,11 +205,26 @@
   </section>
 
   <section class="slide">
+    <h2>
+      Спецификации CSS
+    </h2>
     <ul>
       <li>CSS1</li>
       <li>CSS2</li>
       <li>CSS3</li>
       <li>CSS4</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>
+      Спецификации CSS
+    </h2>
+    <ul>
+      <li>CSS1</li>
+      <li>CSS2</li>
+      <li style="font-weight: bold;">CSS3</li>
+      <li style="font-style: italic; opacity: 0.5">CSS4</li>
     </ul>
   </section>
 
@@ -502,30 +278,55 @@
     </ul>
   </section>
 
-  <section class="slide">
-    <h2 class="shout">Браузерные войны</h2>
-    крутая картинка
+  <!-- <section class="slide">
+    <h2 class="section-title">Браузерные войны</h2>
+    <img src="./pictures/deadtooper.jpg" alt="" class="cover w">
   </section>
 
   <section class="slide">
     <h2>
       netscape vs internet explorer
     </h2>
-  </section>
+  </section> -->
 
   <section class="slide">
-    <h2>
+    <h2 class="place">
       вечно-зеленые браузеры
     </h2>
+    <img src="./pictures/caniuse-grid.png" alt="" class="cover w">
   </section>
 
   <section class="slide">
     <h2>
-      как верстали тогда/сейчас
+      Путь джедая
     </h2>
+    <ul>
+      <li>
+        <a href="https://htmlacademy.ru/" target="blank">
+          HTML academy
+        </a>
+      </li>
+      <li>
+        <a href="https://hexlet.io" target="blank">
+          hexlet.io
+        </a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru" target="blank">
+          learn.javascript.ru
+        </a>
+      </li>
+    </ul>
   </section>
 
   <section class="slide">
+    <h2 style="color: white;">
+      Стажировка
+    </h2>
+    <img src="./pictures/headless-jedi.jpg" alt="" class="cover w">
+  </section>
+
+  <!-- <section class="slide">
     <h2>
       пример кнопочки с закругленными краями на таблицах и css2
     </h2>
@@ -535,10 +336,16 @@
     <h2>
       Сайты больше и сложнее. Появляются сложные сервисы(напр, онлайн банки). Все это должно работать быстро, и писать все это надо в короткие сроки => Работы у фронтендера больше, а времени меньше
     </h2>
-  </section>
+  </section> -->
 
-  <section class="slide">
-    <h2 class="shout"> Инструменты </h2>
+  <section class="slide no-count undercover">
+    <h2 class="section-title"> Эпизод <span style="font-family: serif">II</span> </h2>
+    <ul style="color: white" class="next">
+      <li>Инструменты</li>
+      <li>Современный Фронтенд</li>
+      <li>Soft Skills</li>
+    </ul>
+    <img src="./pictures/falcon.jpg" alt="" class="cover h">
   </section>
 
   <section class="slide">
@@ -546,15 +353,15 @@
       Редакторы кода и IDE
     </h2>
     <ul>
-      <li class="next">Sublime Text</li>
-      <li class="next">Brackets</li>
-      <li class="next">Atom</li>
-      <li class="next">Web Storm</li>
-      <li class="next">Visual Studio Code</li>
+      <li>Sublime Text</li>
+      <li>Brackets</li>
+      <li>Atom</li>
+      <li>Web Storm</li>
+      <li>Visual Studio Code</li>
     </ul>
   </section>
 
-  <section class="slide no-count">
+  <section class="slide">
     <img src="./pictures/vscode.png" alt="" class="cover">
   </section>
 
@@ -563,11 +370,11 @@
       Дизайн
     </h2>
     <ul>
-      <li class="next">Photoshop</li>
-      <li class="next">Sketch</li>
-      <li class="next">Zeplin</li>
-      <li class="next">Avocode</li>
-      <li class="next">Figma</li>
+      <li>Photoshop</li>
+      <li>Sketch</li>
+      <li>Zeplin</li>
+      <li>Avocode</li>
+      <li>Figma</li>
     </ul>
   </section>
 
@@ -597,16 +404,16 @@
       Шаблонизаторы
     </h2>
     <ul>
-      <li class="next">
+      <li>
         Twig
       </li>
-      <li class="next">
+      <li>
         Handlebars
       </li>
-      <li class="next">
+      <li>
         Nunjucks
       </li>
-      <li class="next">
+      <li>
         Pug (Jade)
       </li>
     </ul>
@@ -621,30 +428,27 @@
       Препроцессоры
     </h2>
     <ul>
-      <li class="next">
+      <li>
         Less
       </li>
-      <li class="next">
-        Sass
+      <li>
+        Sass (SCSS)
       </li>
-      <li class="next">
+      <li>
         Stylus
       </li>
-      <li class="next">
+      <li>
         PostCSS
       </li>
     </ul>
   </section>
 
-  <section class="slide">
-    какой-нибудь пример с преимуществом препроцессоров
-    <img src="./pictures/scss-features.png" width="auto" height="350" alt="" class="center">
+  <section class="slide" style="background: #1E1E1E;">
+    <img src="./pictures/scss-features.png" width="auto" height="90%" alt="" class="cover">
   </section>
 
   <section class="slide">
-    <h2>
-      PostCSS
-    </h2>
+    <img src="./pictures/postcss.png" alt="" class="cover w">
   </section>
 
   <section class="slide">
@@ -686,10 +490,29 @@
   </section>
 
   <section class="slide">
-    <h2>
-      cssnext
+      <h2>
+        Плагины PostCSS
+      </h2>
+      <ul>
+        <li><a href="http://"></a></li>
+        <li><a href="http://"></a></li>
+        <li><a href="http://"></a></li>
+        <li><a href="http://"></a></li>
+      </ul>
+    </section>
+
+  <section class="slide undercover" style="color: white;">
+    <h2 style="color: yellow">
+      CSSNEXT
     </h2>
-    <img src="./pictures/cssnext.jpg" alt="" class="">
+    <ul>
+      <li>Autoprefixer</li>
+      <li>Custom Properties</li>
+      <li>Nesting</li>
+      <li>color( ) function</li>
+      <li>more...</li>
+    </ul>
+    <img src="./pictures/future.jpg" alt="" class="cover w">
   </section>
 
   <section class="slide">
@@ -697,61 +520,110 @@
       Методологии
     </h2>
     <ul>
-      <li class="next"> OOCSS </li>
-      <li class="next"> SMACSS </li>
-      <li class="next"> BEM </li>
+      <li><a href="">OOCSS</a></li>
+      <li><a href="">SMACSS</a></li>
+      <li><a href="">BEM</a></li>
     </ul>
   </section>
 
   <section class="slide">
     <h2>
-       BEM
+      BEM
     </h2>
-    <p>
+    <p style="width: 500px;">
       Методология БЭМ создана в Яндексе для разработки сайтов, которые надо делать быстро,а поддерживать долгие годы. <br>
       Она позволяет создавать расширяемые и повторно используемые компоненты интерфейса.
     </p>
+    <img src="./pictures/death-star-lego.png" alt="" width="600" class="place bottom right" style="z-index: -1;">
+  </section>
+
+  <section class="slide">
+    <h2>
+      BEM
+    </h2>
+    <img src="./pictures/lightsaber-block.png" alt="" width="100%">
+    <pre>
+      <code><div class="lightsaber"></div></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>
+      BEM
+    </h2>
+    <img src="./pictures/lightsaber-element.png" alt="" width="100%">
+  </section>
+
+  <section class="slide">
+    <h2>
+      BEM
+    </h2>
+    <img src="./pictures/lightsaber-mod.png" alt="" width="100%">
   </section>
 
   <section class="slide">
     <h2>Прототипирование</h2>
     <ul>
-      <li class="next">Bootstrap</li>
-      <li class="next">Foundation</li>
-      <li class="next">Materialize</li>
-      <li class="next">Bulma</li>
-      <li class="next">Semantic UI</li>
-      <li class="next">UI kit</li>
+      <li><a href="">Bootstrap</a></li>
+      <li><a href="">Foundation</a></li>
+      <li><a href="">Materialize</a></li>
+      <li><a href="">Bulma</a></li>
+      <li><a href="">Semantic UI</a></li>
+      <li><a href="">UI kit</a></li>
     </ul>
   </section>
 
   <section class="slide">
-    <h2 class="shout">
-      JavaScript
-    </h2>
+    <img src="./pictures/js.jpg" alt="" class="cover">
   </section>
 
   <section class="slide">
     <h2>Библиотеки</h2>
     <ul>
-      <li class="next">jQuery</li>
-      <li class="next">Lodash</li>
+      <li>jQuery</li>
+      <li>Lodash</li>
     </ul>
   </section>
 
-  <section class="slide">
-    <h2>Фрэймворки</h2>
-    <ul class="double">
-      <li class="next">Angular</li>
-      <li class="next">React</li>
-      <li class="next">Vue</li>
-      <li class="next">Ember</li>
-      <li class="next">Polymer</li>
-      <li class="next">Aurelia</li>
-      <li class="next">Backbone</li>
-      <li class="next">Knockout</li>
-    </ul>
+  <section class="slide" id="frameworks">
+    <div class="next" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(255, 255, 255, 0.95);padding: 106px 100px 0; opacity: 0; transition: 0.3s">
+      <h2>Фрэймворки</h2>
+      <ul class="double">
+        <li>Angular</li>
+        <li>React</li>
+        <li>Vue</li>
+        <li>Ember</li>
+        <li>Polymer</li>
+        <li>Aurelia</li>
+        <li>Backbone</li>
+        <li>Knockout</li>
+      </ul>
+    </div>
+    <img src="./pictures/frameworks.png" alt="" class="cover w">
+
+    <style>
+      #frameworks .next.active {
+        opacity: 1 !important;
+      }
+    </style>
   </section>
+
+  <section class="slide">
+      <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(255, 255, 255, 0.95);padding: 106px 100px 0;">
+        <h2>Фрэймворки</h2>
+        <ul class="double">
+          <li style="font-weight: bold;">Angular</li>
+          <li style="font-weight: bold;">React</li>
+          <li style="font-weight: bold;">Vue</li>
+          <li>Ember</li>
+          <li>Polymer</li>
+          <li>Aurelia</li>
+          <li>Backbone</li>
+          <li>Knockout</li>
+        </ul>
+      </div>
+      <img src="./pictures/frameworks.png" alt="" class="cover w">
+    </section>
 
   <section class="slide">
     <h2>Vanilla JS</h2>
@@ -785,11 +657,11 @@
       Собираем Фронтенд
     </h2>
     <ul>
-      <li class="next">Gulp</li>
-      <li class="next">Rollup</li>
-      <li class="next">Brunch</li>
-      <li class="next">Webpack</li>
-      <li class="next">Parcell</li>
+      <li>Gulp</li>
+      <li>Rollup</li>
+      <li>Brunch</li>
+      <li>Webpack</li>
+      <li>Parcell</li>
     </ul>
   </section>
   <section class="slide">
@@ -805,13 +677,7 @@
 	</ul>
   </section>
 
-  <section class="slide">
-    <h2 class="shout shrink">
-      Достаточно?
-    </h2>
-  </section>
-
-  <section class="slide">
+  <!-- <section class="slide">
     <h2>
       Тестирование
     </h2>
@@ -828,7 +694,7 @@
       <li>E2E-тестирование</li>
       <li>Regression-тестирование</li>
     </ul>
-  </section>
+  </section> -->
 
   <section class="slide">
     <h2>
@@ -843,10 +709,15 @@
     </ul>
   </section>
 
-  <section class="slide">
-    <h2 class="shout srink">
-      Зочем?
+  <section class="slide undercover no-count">
+    <h2 class="section-title">
+        Эпизод <span style="font-family: serif">III</span> 
     </h2>
+    <ul style="color: white" class="next">
+      <li>Будущее фронтенда</li>
+      <li>Дальнейшие пути развития</li>
+    </ul>
+    <img src="./pictures/deadtrooper.jpg" alt="" class="cover h" style="transform: translate(-50%, -50%) scale(-1, 1);">
   </section>
 
   <section class="slide">
@@ -914,15 +785,19 @@
      </ul>
   </section>
 
+  <section class="slide no-count" id="fin" style="background: #151515;">
+    <img src="./pictures/404.jpg" alt="" class="cover h">
+  </section>
+
   <div class="progress">
     <style>
-      .progress {
+      /* .progress {
         border: none;
         border-top: 5px solid #85d800;
         clip: auto;
         box-shadow: 0 0 8px 3px #85d800;
         border-radius: 5px;
-      }
+      } */
     </style>
   </div>
 
