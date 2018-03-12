@@ -12,6 +12,14 @@
       font-size: 130px;
     }
 
+    .slide .subtitle {
+      color: gray;
+      font-size: 32px;
+      line-height: 1.5;
+      font-weight: 700;
+      font-style: italic;
+    }
+
     .slide .section-title--black {
       color: black;
     }
@@ -109,18 +117,18 @@
         HTML, CSS, JavaScript
       </li>
       <li>
-        С чего начать
+        Первые шаги
       </li>
     </ul>
   </section>
 
   <section class="slide">
     <h2>
-      Front-end
+      Frontend
     </h2>
     <figure>
       <blockquote>
-        <p>Front-end - интерфейс взаимодействия между пользователем и основной программно-аппаратной частью (back-end).</p>
+        <p>Frontend - интерфейс взаимодействия между пользователем и основной программно-аппаратной частью (back-end).</p>
       </blockquote>
     </figure>
   </section>
@@ -142,13 +150,6 @@
       </li>
     </ul>
   </section>
-<!-- 
-  <section class="slide" style="background-color: #DEDEDE;">
-    <h2 style="color:#000">
-      Эволюция Фронтенда
-    </h2>
-    <img class="cover" src="./pictures/evolution.jpg" alt="">
-  </section> -->
 
   <section class="slide">
     <!-- <h2>
@@ -232,6 +233,7 @@
       <li style="font-weight: bold;">CSS3</li>
       <li style="font-style: italic; opacity: 0.5">CSS4</li>
     </ul>
+    <img src="./pictures/CSS3_levels.png" alt="" height="80%" class="place right">
   </section>
 
   <section class="slide">
@@ -295,12 +297,12 @@
     </h2>
   </section> -->
 
-  <section class="slide">
+  <!-- <section class="slide">
     <h2 class="place">
       вечно-зеленые браузеры
     </h2>
     <img src="./pictures/caniuse-grid.png" alt="" class="cover w">
-  </section>
+  </section> -->
 
   <section class="slide">
     <h2>
@@ -964,9 +966,9 @@
         <li><a target="_blank" href="https://code.visualstudio.com/"> Visual Studio Code <sup>*</sup></a></li>
       </ul>
       <ul class="next">
-        <li>Мультиселект</li>
         <li>Подсветка синтаксиса</li>
         <li>Автодополнение</li>
+        <li>Мультиселект</li>
         <li>Расширяемость плагинами</li>
         <li>Интеграция с Git</li>
       </ul>
@@ -1010,26 +1012,43 @@
     <img src="./pictures/zeplin.png" alt="" class="cover">
   </section>
 
-  <style>
-    .git {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-  </style>
-  <section class="slide git">
+  <section class="slide">
     <h2>
       Системы контроля версий
     </h2>
     <p>
-      <img src="./pictures/git.png" alt="" class="cover">
+      <img src="./pictures/final-git.png" alt="" class="place">
     </p>
   </section>
 
   <section class="slide">
     <h2>
+      Системы контроля версий
+    </h2>
+    <p>
+      <img src="./pictures/git.png" alt="" style="display: block; margin: 0 auto;">
+    </p>
+  </section>
+
+  <!-- <section class="slide">
+    <h2>
       Масштабируемость
     </h2>
     здесь надо подвести к шаблонизаторам и препроцессорам
+  </section> -->
+
+  <section class="slide">
+    <h2>
+      Системы контроля версий
+    </h2>
+    <p class="subtitle">
+      Веб-сервисы для хостинга проектов и совместной разработки
+    </p>
+    <ul>
+      <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+      <li><a href="https://bitbucket.org/product" target="_blank">Bitbucket</a></li>
+      <li><a href="https://about.gitlab.com/" target="_blank">Gitlab</a></li>
+    </ul>
   </section>
 
   <section class="slide">
@@ -1038,16 +1057,22 @@
     </h2>
     <ul>
       <li>
-        Twig
+        <a href="https://twig.symfony.com/" target="_blank">
+          Twig 
+        </a>
+        <span class="next"><i> - на стороне сервера</i></span>
       </li>
       <li>
-        Handlebars
+        <a href="https://handlebarsjs.com/" target="_blank">
+          Handlebars
+        </a>
+        <span class="next"><i> - в браузере</i></span>
       </li>
       <li>
-        Nunjucks
-      </li>
-      <li>
-        Pug (Jade)
+        <a href="https://pugjs.org/api/getting-started.html" target="_blank">
+          Pug (Jade)
+        </a>
+        <span class="next"><i> - на этапе сборки</i></span>
       </li>
     </ul>
   </section>
@@ -1062,16 +1087,16 @@
     </h2>
     <ul>
       <li>
-        Less
+        <a href="http://lesscss.org/" target="_blank">Less</a>
       </li>
       <li>
-        Sass (SCSS)
+        <a href="https://sass-lang.com/" target="_blank">Sass (SCSS)</a>
       </li>
       <li>
-        Stylus
+        <a href="http://stylus-lang.com/" target="_blank">Stylus</a>
       </li>
       <li>
-        PostCSS
+        <a href="https://github.com/postcss/postcss" target="_blank">PostCSS</a>
       </li>
     </ul>
   </section>
@@ -1154,9 +1179,9 @@
       Методологии
     </h2>
     <ul>
-      <li><a href="http://oocss.org/">OOCSS</a></li>
-      <li><a href="https://smacss.com/">SMACSS</a></li>
       <li><a href="https://ru.bem.info/">BEM</a></li>
+      <li><a href="https://smacss.com/">SMACSS</a></li>
+      <li><a href="http://oocss.org/">OOCSS</a></li>
     </ul>
   </section>
 
@@ -1220,6 +1245,7 @@
       <li><a href="">Semantic UI</a></li>
       <li><a href="">UI kit</a></li>
     </ul>
+    <img src="./pictures/bootstrap-components.png" alt="" class="place right" style="top: 58%; width: 70%;">
   </section>
 
   <section class="slide">
